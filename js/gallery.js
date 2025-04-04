@@ -83,6 +83,7 @@ gallery.addEventListener("click", function (event) {
 	event.preventDefault();
 
 	basicLightbox.create(`
+		<h1>Hello</h1>
 		<img width="1400" height="900" src="${event.target.dataset.source}">
 	`).show();
 });
