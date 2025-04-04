@@ -83,17 +83,15 @@ gallery.addEventListener("click", function (event) {
 	event.preventDefault();
 
 	basicLightbox.create(`
-		<h1>Hello</h1>
 		<img width="1400" height="900" src="${event.target.dataset.source}">
 	`).show();
 });
 
 
-/*
 const instance = basicLightbox.create(`
 	<h1>Dynamic Content</h1>
 	<p>You can set the content of the lightbox with JS.</p>
 `);
 
-console.log(instance);
-*/
+console.log(instance.close());
+
