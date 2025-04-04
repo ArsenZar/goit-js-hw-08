@@ -71,21 +71,26 @@ const gallery = document.querySelector(".gallery");
 
 const resultGallery = images
 	.map(({ preview, original, description }) => `<li class="gallery-item">
-        <div class="gallery-link" href="">
+        <a class="gallery-link" href="large-image.jpg">
             <img class="gallery-image" src="${preview}" data-source="${original}" alt="${description}" />
-        </div>
+        </a>
     </li>`)
 	.join("");
 
 gallery.insertAdjacentHTML("beforeend", resultGallery);
 
 gallery.addEventListener("click", function (event) {
-	console.log(event.target.dataset.source);
+	event.preventDefault();
+
+	
 });
 
+
+/*
 const instance = basicLightbox.create(`
 	<h1>Dynamic Content</h1>
 	<p>You can set the content of the lightbox with JS.</p>
 `);
 
 console.log(instance);
+*/
