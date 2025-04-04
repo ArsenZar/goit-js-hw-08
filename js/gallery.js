@@ -82,16 +82,20 @@ gallery.insertAdjacentHTML("beforeend", resultGallery);
 gallery.addEventListener("click", function (event) {
 	event.preventDefault();
 
+	if (event.target.nodeName !== "IMG") {
+		return;
+	}
+
 	basicLightbox.create(`
 		<img width="1400" height="900" src="${event.target.dataset.source}">
 	`).show();
 });
 
-
+/*
 const instance = basicLightbox.create(`
 	<h1>Dynamic Content</h1>
 	<p>You can set the content of the lightbox with JS.</p>
 `);
 
 console.log(instance.close());
-
+*/
