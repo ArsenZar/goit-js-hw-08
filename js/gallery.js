@@ -1,4 +1,4 @@
-
+'use strict';
 
 const images = [
   {
@@ -90,6 +90,7 @@ gallery.addEventListener("click", function (event) {
 		<img width="1400" height="900" src="${event.target.dataset.source}">
 	`).show();
 });
+
 
 /*
 const instance = basicLightbox.create(`
